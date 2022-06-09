@@ -50,7 +50,7 @@ func NewPCTransport(iceServers []webrtc.ICEServer) (*PCTransport, error) {
 	}
 
 	api := webrtc.NewAPI(webrtc.WithMediaEngine(m), webrtc.WithInterceptorRegistry(i))
-	pc, err := api.NewPeerConnection(webrtc.Configuration{ICEServers: iceServers})
+	pc, err := api.NewPeerConnection(webrtc.Configuration{ICEServers: iceServers, ICETransportPolicy: webrtc.ICETransportPolicyRelay})
 	if err != nil {
 		return nil, err
 	}
