@@ -1,4 +1,4 @@
-module github.com/livekit/server-sdk-go
+module github.com/rbs-ri/server-sdk-go
 
 go 1.17
 
